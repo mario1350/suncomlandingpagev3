@@ -1,0 +1,192 @@
+# SunCom Global Bolt Manifest
+
+## Contexto & Meta
+- Proyecto: Landing page full-stack de SunCom (Puerto Rico)
+- Meta: Cotización solar instantánea y captura de leads con scrollytelling vibrante
+- UX clave: Dynamic Landing Page, Immersive Scrolling, Kinetic Typography, Interactive 3D, Purposeful Micro-interactions
+
+## Stack & Librerías
+- Frontend: React, Tailwind CSS, ShadCN UI
+- Backend: Supabase (Auth, DB, Storage)
+- Gráficas: Recharts
+- Íconos: lucide-react
+
+## Diseño
+- Colores: Chinita #FF7F11, Navy #1E2A38, Rojito #D64541, Gris #4A4A4A
+- Tipografía: Inter (sans-serif), headlines xl, body base
+- Layout: Grid responsive, bordes 2xl, sombras suaves
+- Animaciones: ease-in-out, ≤ 300 ms; kinetic headlines; parallax scroll
+- Fondo dinámico: loop de video o partículas WebGL
+
+## Calidad de Código
+- Formateo: Prettier + ESLint (Airbnb)
+- ≤ 800 líneas por archivo; si supera, crear subcomponente en `/src/components`
+- Pruebas: `data-testid` y Storybook para componentes clave
+
+## Restricciones
+- No tocar `public/index.html`, `tailwind.config.js`, ni config de Supabase
+- Cambios de esquema DB requieren confirmación manual
+
+Contexto Adicional de .bolt/prompt:
+
+"""
+1. Archivo Global de Instrucciones (.bolt/prompt)
+
+Propósito: Manifiesto persistente que Bolt procesará antes de cualquier prompt, asegurando coherencia en marca, arquitectura y experiencia final.
+
+Meta Final: Webapp full‑stack tipo landing page vibrante para SunCom PR, con fondo dinámico, scrollytelling inmersivo y UI de alta conversión.
+
+Instrucciones Generales para Bolt:
+
+Paso a Paso: Descompón cada petición en subtareas, implementa y prueba antes de continuar. No avances hasta confirmar cada etapa.
+
+Análisis Previo: Antes de generar código, revisa y comprende completamente el prompt. Tómate tu tiempo para asegurar alineación con requisitos.
+
+Tamaño de Archivos: Mantén componentes <800 líneas. Si un archivo crece más, crea un nuevo componente con nombre descriptivo.
+
+Full‑Stack: Genera tanto frontend (React/Tailwind/ShadCN) como backend (Node/Supabase, endpoints REST/WebSocket) en una sola sesión, enlazando acciones y datos.
+
+Stack & Estructura:
+
+Frontend: React + Tailwind CSS + ShadCN UI
+
+Backend: Supabase (Auth, DB, Storage)
+
+API: Endpoints Node encima de Supabase para lógica de cotización y estado de carga
+
+Iconografía: lucide-react
+
+Gráficos: recharts
+
+Guía de Diseño UI Avanzada:
+
+Dynamic Landing Page: Enfocado en movimiento y engagement inmediato.
+
+Immersive Scrolling (Scrollytelling): Secciones narrativas que reaccionan al scroll (fade, translate, parallax).
+
+Kinetic Typography: Titulares animados para resaltar propuestas de valor.
+
+Interactive 3D Objects / Spatial Design: Elementos con profundidad y rotación ligera en 3D.
+
+Micro‑Interactions & Motion Design: Animaciones intencionadas en botones, inputs y feedback.
+
+Progressive Blur / Layered Effects: Blurs dinámicos y capas superpuestas para dirigir la atención.
+
+Estilo y Colores:
+
+Chinita (Orange): #FF7F11
+
+Navy Blue: #1E2A38
+
+Rojito Suave: #D64541
+
+Gris Neutro: #4A4A4A
+
+Tipografía: Inter (Sans‑serif moderna), headlines xl, cuerpo base
+
+Calidad de Código:
+
+Formateo: Prettier + ESLint (Airbnb)
+
+Estructura: Componentes en /src/components, hooks en /src/hooks.
+
+Pruebas: Data-testid en elementos clave; prototipos en Storybook.
+
+Restricciones Críticas:
+
+No modificar public/index.html, tailwind.config.js ni config de Supabase.
+
+Cualquier cambio de DB schema requiere confirmación manual.
+
+Minimizar dependencias externas; usa solo las aprobadas aquí.
+
+Provide direct answers to questions. Be helpful and concise.
+
+NEVER start your response with a heading!
+
+NEVER create inline SVGs to avoid unnecessary output and increased costs for the user!
+
+Use a fitting font, theme, and design for this.
+
+Think if the design could use tasteful animations anywhere.
+
+Think of other comparable companies/sites to take inspiration from.
+
+Use apple level design aesthetics and skills!
+
+Make sure font colors are ALWAYS READABLE and VISIBLE on all background colors with sufficient contrast ratios, including during and after transition states (e.g., when a header background changes from transparent to solid color).
+
+Implement a responsive design with appropriate breakpoints to ensure optimal viewing experience across all viewport sizes, from mobile to desktop.
+
+Use consistent layouts, clear hierarchies, and intentional white space.
+
+Use appropriate line spacing (150% for body, 120% for headings), and 3-font weights maximum.
+
+Implement a comprehensive color system with at least 6 color ramps (primary, secondary, accent, success, warning, error) plus neutral tones, each with multiple shades for proper hierarchical application.
+
+Use a consistent 8px spacing system, proper alignment, and visual balance.
+
+Apply the Single Responsibility Principle to all views (e.g., view, edit, manage) and avoid stacking unrelated features or editing states on the same screen.
+
+Use progressive disclosure to manage complexity and reveal secondary actions contextually (via modals, drawers, etc.).
+
+<mandatory_coding_requirements>
+  Code MUST be organized across multiple files. Bolt never puts all code into a single big file. Large single files with all the code are never acceptable, because they are hard for users to read and make it more likely that Bolt will fail to make working edits to them in the future. Always follow good software engineering principles for modularity and maintainability by creating smaller files of under 300 lines. Break up any significant changes into multiple smaller files.
+
+  Follow the rules below meticulously:
+
+    1. Hard requirement: NEVER put all outputted code in a single file that is longer than 300 lines. Any file exceeding 300 lines strictly MUST be split into multiple smaller files to make the codebase maintainable.
+
+    2. Each file should be small and should focus on exactly ONE component or functionality. Follow a modular architecture with clear separation of concerns.
+
+    3. Use proper imports/exports to share code between files, not global variables.
+
+    4. The ideal file is around 200 lines long. Keep most files 200 lines of code or shorter.
+
+  When outputting code, ensure that all files are under the maximum length limit of 300 lines long. Whenever there are more than 200 lines in the file, consider moving some of the code to a new file and importing it correctly instead
+
+  These requirements are MANDATORY and CANNOT be broken, as they are vital to making the codebase usable in the long term.
+</mandatory_coding_requirements>
+
+Always start your response using the following format:
+
+  1. Approach Statement: Acknowledge the user's requirements and briefly describe the scope as an MVP or first version
+
+  2. Core Features: List 4-8 essential features using bullet points with this exact format:
+
+    **Core Features**:
+    - [Feature 1]
+    - [Feature 2]
+    - [Feature 3]
+    - [Feature 4]
+    - [Feature 5]
+
+  3. Design Elements: Describe the visual design using bullet points, following the mentioned design guidelines with this exact format:
+
+    **Design Elements**:
+    - [Design Element 1]
+    - [Design Element 2]
+    - [Design Element 3]
+    - [Design Element 4]
+
+  IMPORTANT: After generating the artifact, finish with a brief summary of the solution without repeating any of the previously listed items. This should be a concise wrap-up of your approach.
+
+  ## Example Response Format
+
+  Based on your requirements, I'll create a beautifully designed TaskFlow app with the core functionality needed for the MVP. We'll focus on a clean UI with pleasing aesthetics and solid functionality for managing tasks and lists.
+
+  **Core Features**:
+    - A modern, clean interface with subtle animations
+    - Task creation, completion, and deletion functionality
+    - Task categorization with labels/priorities
+    - A responsive design that works on all devices
+
+  **Design Elements**:
+    - Color system with primary blue (#3B82F6), secondary teal (#14B8A6), accent orange (#F97316), plus success, warning, and error states
+    - Smooth animations for task interactions
+    - Modern, readable fonts
+    - Intuitive task cards, clean lists, and easy navigation
+    - Responsive design with tailored layouts for mobile (<768px), tablet (768-1024px), and desktop (>1024px)
+    - Subtle shadows and rounded corners for a polished look
+
+  I've created a comprehensive TaskFlow application with a clean, professional design and all the features you requested.
