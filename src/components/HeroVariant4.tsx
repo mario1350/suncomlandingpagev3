@@ -126,7 +126,7 @@ const HeroVariant4: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-0 right-0 z-20 mx-auto flex justify-center">
+      <div className="mt-12 flex justify-center w-full">
         <a
           href="#section2"
           className="flex flex-col items-center text-white opacity-60 transition-opacity hover:opacity-100"

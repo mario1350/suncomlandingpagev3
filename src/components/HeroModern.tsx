@@ -28,7 +28,7 @@ const HeroModern: React.FC = () => {
   return (
     <section
       id="hero-modern"
-      className="relative flex min-h-screen w-full items-center justify-center bg-[#1E2A38] text-white overflow-hidden"
+      className="relative flex min-h-[110vh] w-full items-center justify-center bg-[#1E2A38] text-white overflow-hidden"
       aria-labelledby="hero-modern-title"
     >
       {/* Background Image */}
@@ -47,9 +47,9 @@ const HeroModern: React.FC = () => {
         "container relative z-10 px-6 transition-all duration-1000 ease-out transform",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       )}>
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-5xl flex flex-col items-center">
           {/* Path Indicator */}
-          <div className="mb-16 flex items-center justify-center">
+          <div className="mb-12 flex items-center justify-center">
             <div className="h-0.5 w-16 bg-[#FF7F11]"></div>
             <span className="mx-4 text-sm font-medium uppercase tracking-widest text-[#FF7F11]">
               SunCom Global
@@ -73,7 +73,7 @@ const HeroModern: React.FC = () => {
           </p>
           
           {/* CTA Button */}
-          <div className="mb-16 flex justify-center">
+          <div className="mb-24 flex justify-center">
             <button
               className="relative overflow-hidden rounded-xl bg-[#FF7F11] px-8 py-4 text-lg font-medium text-white transition-all duration-300 hover:bg-[#FF7F11]/90 hover:shadow-[0_0_30px_rgba(255,127,17,0.6)]"
               onClick={handleScroll}
@@ -84,7 +84,7 @@ const HeroModern: React.FC = () => {
           </div>
           
           {/* Benefits */}
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3 w-full">
             <div className="benefit-item opacity-0 translate-y-4 transition-all duration-500 ease-out bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex flex-col items-center text-center hover:bg-white/10 transition-colors">
               <div className="mb-4 rounded-full bg-[#FF7F11]/20 p-4">
                 <Sun className="h-8 w-8 text-[#FF7F11]" />
@@ -109,21 +109,20 @@ const HeroModern: React.FC = () => {
               <p className="text-white/70">Reduce tu factura eléctrica hasta un 70% desde el primer mes.</p>
             </div>
           </div>
-        </div>
-      </div>
-      
-      {/* Scroll Cue */}
-      <div className="absolute bottom-8 left-0 right-0 z-20 mx-auto flex justify-center">
-        <button
-          onClick={handleScroll}
-          className="group flex flex-col items-center text-white opacity-70 transition-opacity hover:opacity-100"
-          aria-label="Scroll to next section"
-        >
-          <span className="mb-2 text-sm">Vamos a empezar</span>
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 transition-all duration-300 group-hover:border-white/40">
-            <ChevronDown className="h-6 w-6 animate-bounce" />
+          {/* Scroll Cue */}
+          <div className="mt-12 flex justify-center w-full">
+            <button
+              onClick={handleScroll}
+              className="group flex flex-col items-center text-white opacity-70 transition-opacity hover:opacity-100"
+              aria-label="Scroll to next section"
+            >
+              <span className="mb-2 text-sm">Vamos a empezar</span>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 transition-all duration-300 group-hover:border-white/40">
+                <ChevronDown className="h-6 w-6 animate-bounce" />
+              </div>
+            </button>
           </div>
-        </button>
+        </div>
       </div>
     </section>
   );
